@@ -1,4 +1,4 @@
-## BOJ10872 팩토리얼##
+## BOJ10872 팩토리얼 ##
 
 def factorial(n):
     if n == 1 or n == 0:
