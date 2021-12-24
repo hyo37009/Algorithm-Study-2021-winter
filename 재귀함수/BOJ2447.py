@@ -9,51 +9,28 @@ def r(n):
 
 
 def r1(n):
-    if n == 1:
-        for _ in range(3):
-            print('*', end='')
+    if n == 0:
+        print('*', end='')
         return
     else:
         for _ in range(n*3):
             r1(n//3)
-        print()
-        for _ in range(n*3):
-            r2(n//3)
-        print()
-        for _ in range(n*3):
-            r1(n//3)
-        print()
+
 
 
 def r2(n):
-    if n == 1:
-        print('* *', end='')
-        return
-    else:
-        for _ in range(n//3):
-            r1(n//3)
-            g(n//3)
-            r1(n//3)
-        print()
-        for _ in range(n//3):
-            r2(n//3)
-            g(n//3)
-            r2(n//3)
-        print()
-        for _ in range(n//3):
-            r1(n//3)
-            g(n//3)
-            r1(n//3)
-        print()
+    r1(n//3)
+    g(n//3)
+    r1(n//3)
 
 
 
 def g(n):
-    if n == 1:
-        print('   ', end='')
+    if n == 0:
+        print(' ', end='')
+        return
     else:
-        for _ in range(n//3):
+        for _ in range(n*3):
             g(n//3)
-    print()
 
-r(9)
+r(3)
