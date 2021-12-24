@@ -2,31 +2,58 @@
 ## 오늘은 이거 푼다... -크리스마스 이브에-
 
 
+def r(n):
+    r1(n)
+    r2(n)
+    r1(n)
 
-def star(n):
+
+def r1(n):
     if n == 1:
-        print('*', end='')
+        for _ in range(3):
+            print('*', end='')
+        return
     else:
-        for _ in range(3):
-            star(n - 1)
+        for _ in range(n*3):
+            r1(n//3)
         print()
-        star(n - 1)
-        star2(n - 1)
-        star(n - 1)
+        for _ in range(n*3):
+            r2(n//3)
         print()
-        for _ in range(3):
-            star(n - 1)
+        for _ in range(n*3):
+            r1(n//3)
         print()
 
 
-def star2(n):
+def r2(n):
     if n == 1:
-        print(' ', end='')
+        print('* *', end='')
+        return
     else:
-        for _ in range(3):
-            for _ in range(3):
-                star2(n - 1)
-            print()
+        for _ in range(n//3):
+            r1(n//3)
+            g(n//3)
+            r1(n//3)
+        print()
+        for _ in range(n//3):
+            r2(n//3)
+            g(n//3)
+            r2(n//3)
+        print()
+        for _ in range(n//3):
+            r1(n//3)
+            g(n//3)
+            r1(n//3)
+        print()
 
 
-star(3)
+
+def g(n):
+    if n == 1:
+        print('   ', end='')
+    else:
+        for _ in range(n//3):
+            g(n//3)
+    print()
+
+r(9)
