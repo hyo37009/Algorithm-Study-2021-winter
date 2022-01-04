@@ -34,6 +34,8 @@ def sth(num):
     return (''.join(list))[::-1]
 
 n = 846
+
+#확인용으로 내장함수와 함께 출력한다.
 print('0b' + two(n))
 print(bin(n))
 print('0o' + eight(n))
