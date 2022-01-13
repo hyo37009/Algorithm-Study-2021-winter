@@ -1,9 +1,7 @@
-## bubble sort ##
-import random
+import initlist
 
-x = []
-for i in range(10):
-    x.append(random.randrange(1, 30))
+x = initlist.listinitiation()
+n = len(x)
 
 print('정렬 전 :', x)
 
